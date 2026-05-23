@@ -1,0 +1,21 @@
+spring:
+  # ???????
+  datasource:
+    url: jdbc:mysql://localhost:3306/stockmix?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root          # ???? MySQL ???
+    password: 123456  # ???? MySQL ??
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # JPA / Hibernate ??
+  jpa:
+    show-sql: true          # ?????? SQL?????
+    hibernate:
+      ddl-auto: validate    # ????????????
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  application:
+    name: stockmix-back
+  server:
+    port: 8080
+    address: 0.0.0.0
